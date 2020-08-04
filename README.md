@@ -15,7 +15,7 @@ Con questo strumento è possibile visualizzare i grafici dei vari scenari:
 ###### Nuovi casi giornalieri confrontando dati di diverse regioni:
 ![Alt text](./img/Figure_Lazio_Lomb_Pie_Venet.png?raw=true)
 
-#### How does it work:
+#### How does it work:
 
 ```init.py``` si occupa di effettuare la lettura dei files csv e di effettuare una prima pulizia dei dati
 
