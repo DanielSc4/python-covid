@@ -64,9 +64,20 @@ def draw_by_region(dataframes, regione, frequency = "d"):
 	elif (frequency == "w"):
 		# TODO: ....
 		return
-	plt.plot(range(0, len(dataframes)), totali, label='casi covid-19 nella regione {}'.format(regione))  # Plot some data on the (implicit) axes.
+	plt.plot(range(0, len(dataframes)), totali, label='casi covid-19 nella regione {}'.format(regione))
 	plt.xlabel('giorni')
 	plt.ylabel('n casi')
 	plt.title("Casi giornalieri coronavirus nella regione {}".format(regione))
+	plt.legend()
+	plt.show()
+
+def draw_all_region(dataframes):
+	plt.plot(range(0, len(dataframes)), calcola_incremento_region(dataframes, "Lazio"), label="casi covid-19 nella regione Lazio")
+	plt.plot(range(0, len(dataframes)), calcola_incremento_region(dataframes, "Lombardia"), label='casi covid-19 nella regione Lombardia')
+	plt.plot(range(0, len(dataframes)), calcola_incremento_region(dataframes, "Piemonte"), label='casi covid-19 nella regione Piemonte')
+	plt.plot(range(0, len(dataframes)), calcola_incremento_region(dataframes, "Veneto"), label='casi covid-19 nella regione Veneto')
+	plt.xlabel('giorni')
+	plt.ylabel('n casi')
+	plt.title("Casi giornalieri coronavirus nelle regioni italiane")
 	plt.legend()
 	plt.show()
